@@ -10,8 +10,8 @@ Front-end part is similar to the shell, it is only needed to demonstrate the res
 - npm run dev  
 
 # Ports to connect (Open in browser):
-- Server: localhost:8000/  
-- Client: localhost:5000/  
+- Server: localhost:5000/  
+- Client: localhost:8000/  
 
 # Screenshots:
 ![ScreenShot](https://cdn.discordapp.com/attachments/754302458129547344/1103763511219326986/image.png)
