@@ -25,10 +25,6 @@ auth.post('/register', async (req, res, next) => {
     if (body.password.length > 200)
         return next(APIerror.valueIsTooLong('password'));
 
-    if (body.email.length > 200)
-        return next(APIerror.valueIsTooLong('email'));
-    
-
     if (body.username.length > 30)
         return next(APIerror.valueIsTooLong('username'));
 
@@ -36,7 +32,7 @@ auth.post('/register', async (req, res, next) => {
         return next(APIerror.send('username is registered'));
 
 
-    if (body.email.length > 80)
+    if (body.email.length > 200)
         return next(APIerror.valueIsTooLong('email'));
 
     if (!helper.validateEmail(body.email))

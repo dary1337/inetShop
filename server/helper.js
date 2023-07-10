@@ -14,17 +14,21 @@ class helper {
     )
 
     static getFileName = (file) => 
-        file.md5 +'.' + file.mimetype.substring(file.mimetype.indexOf("/") + 1);
+        file.md5 + '.' + file.mimetype.substring(file.mimetype.indexOf("/") + 1);
 
     static getFileUrl = () => fileURLToPath(metaUrl);
 
 
     static fileExists = (path = '') => fs.existsSync(path);
 
-    static deleteFile = (directory = '') => {
+    static deleteFile = (path = '') => {
 
-        try { 
-            fs.unlinkSync(directory);
+        try {
+
+            if (!path)
+                throw '';
+
+            fs.unlinkSync(path);
             return true;
         
         } catch {

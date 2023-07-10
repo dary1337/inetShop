@@ -91,14 +91,13 @@ class db_query {
     /** @returns all types in array */
     static types_Get = async (type = '') => {
 
-        let ret;
+        if (!type)
+            return '';
 
         if (type == 'brand')
-            ret = (await db.brands.find().toArray());
+            return (await db.brands.find().toArray())[0].names;
         if (type == 'category')
-            ret = (await db.categories.find().toArray());
-
-        return ret[0].names;
+            return (await db.categories.find().toArray())[0].names;
     }
 
     static types_GetAll = async () => {
