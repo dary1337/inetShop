@@ -4,7 +4,7 @@ PET project node.js learning
 I used express.js framework  
 Front-end part is similar to the shell, it is only needed to demonstrate the response from the server  
 
-# content.env file (create next to server.js):
+# content of `.env` file (create next to server.js):
 PORT = 5000  
 PORT_CLIENT = 8000  
 SECRET_KEY = asjhd8uyh108uh2u8hudhaoivh271y21u38JKDAjhsdjhsdkjashdkHDJhaskdadjh  
